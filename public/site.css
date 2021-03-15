@@ -23,7 +23,9 @@ dl {
 li {
   text-align: left;
   padding: 10px;
-  border: 1px #333 solid;
+  width: 50%;
+  margin-left: 23%;
+  border-bottom: 1px #333 solid;
   margin-top: 10px;
 }
 
