@@ -1,6 +1,5 @@
 const weatherAPI = require('./weatherAPI');
 const fs = require('fs').promises;
-require('dotenv');
 
 // Regex for validating city names for presence of digits and special chars
 const isValid = (city) => !/[~`!#$%^&*+=\-[\]\\';,/{}|\\":<>?\d]/g.test(city);
@@ -63,7 +62,7 @@ module.exports = {
         }
 
         try {
-          const data = await weatherAPI.getSingleCity(cityName);
+          const data = await weatherAPI.getSingleCityWeather(cityName);
 
           res.writeHead(200, { 'Content-Type': 'application/json' }); // sets the header of the response
           res.end(JSON.stringify(data));
@@ -90,7 +89,7 @@ module.exports = {
 
       req.on('end', async () => {
         const cityNames = JSON.parse(body).cities;
-        const data = await weatherAPI.getMultipleCities(cityNames);
+        const data = await weatherAPI.getMultipleCitiesWeather(cityNames);
         res.writeHead(200, { 'Content-Type': 'application/json' }); // sets the header of the response
         res.end(JSON.stringify(data));
       });

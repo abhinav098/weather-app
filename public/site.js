@@ -47,9 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.getElementById('single-results').innerHTML = innerHTML;
-
-
-    return weatherResponse;
   });
 
   document.querySelector('#cities-form').addEventListener('submit', async (e) => {
@@ -79,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let listData = weatherInfo.map((data) => `<li>${data.name}, ${data.weather[0].main}, ${data.weather[0].description}, ${data.main.temp} F</li>`);
 
     document.getElementById('multiple-results').innerHTML = `<ol>${listData.join('')}</ol>`;
-    return weatherInfo;
   });
 
 
