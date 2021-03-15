@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+  <title>My Weather App</title>
+  <link rel="stylesheet" href="/public/site.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <main>
+    <div class="navbar">
+      <h1 align="center">Accurate Weather</h1>
+    </div>
+    <hr>
+    <!-- Tab content -->
+    <div class="row">
+      <div id="single" class="tabcontent left">
+        <h3>Single City Search</h3>
+        <form action="/my-weather-app/single-search" method="POST" id="city-form">
+          <label for="city">Enter City name:</label><br>
+          <input type="text" id="city" name="city" value="" placeholder="Enter city name" required><br>
+          <input type="submit" value="Submit" class="button">
+        </form>
+        <br>
+        <div id="single-results"></div>
+      </div>
+      <div id="multiple" class="tabcontent right">
+        <h3>Multiple Cities Search</h3>
+        <form action="/my-weather-app/multiple-search" method="POST" id="cities-form">
+          <label for="cities">Choose cites:</label><br>
+          <select name="cities" id="cities" multiple>
+            <option value="delhi">Delhi</option>
+            <option value="london">London</option>
+            <option value="panchkula">Panchkula</option>
+            <option value="new york city">New York City</option>
+            <option value="paris">Paris</option>
+            <option value="chandigarh">Chandigarh</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="rome">Rome</option>
+            <option value="california">California</option>
+            <option value="Chennai">Chennai</option>
+          </select>
+          <br><br>
+          <input type="submit" class="button" value="Submit">
+        </form>
+        <br>
+        <div id="multiple-results"></div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="/public/site.js"></script>
+
+</html>

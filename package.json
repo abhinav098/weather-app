@@ -1,0 +1,16 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather app for single city and multiple city",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js 3001"
+  },
+  "author": "Abhinav Garg",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
